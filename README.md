@@ -37,7 +37,7 @@ if err == nil {
 创建客户端时可以通过参数指定采用不同的客户端配置
 例如:设置获取响应头的超时时间为30s
 ```
-wosClient, err := wos.New(ak, sk, endpoint, wos.WithHeaderTimeout(30))
+wosClient, err := wos.New(ak, sk, wos.WithRegion("your-region"), endpoint, wos.WithHeaderTimeout(30))
 ```
 
 **更多参数见下表**
@@ -65,7 +65,7 @@ var ak = "*** Provide your Access Key ***"
 var sk = "*** Provide your Secret Key ***"
 var endpoint = "https://your-endpoint"
  
-wosClient, _ := wos.New(ak, sk, endpoint)
+wosClient, _ := wos.New(ak, sk, endpoint, wos.WithRegion("your-region"))
  
 input := &wos.ListBucketsInput{}
 input.QueryLocation = true
@@ -85,7 +85,7 @@ var ak = "*** Provide your Access Key ***"
 var sk = "*** Provide your Secret Key ***"
 var endpoint = "https://your-endpoint"
  
-wosClient, _ := wos.New(ak, sk, endpoint)
+wosClient, _ := wos.New(ak, sk, endpoint, wos.WithRegion("your-region"))
  
 input := &wos.ListObjectsInput{}
 input.Bucket = bucketName
@@ -106,7 +106,7 @@ var ak = "*** Provide your Access Key ***"
 var sk = "*** Provide your Secret Key ***"
 var endpoint = "https://your-endpoint"
  
-wosClient, _ := wos.New(ak, sk, endpoint)
+wosClient, _ := wos.New(ak, sk, endpoint, wos.WithRegion("your-region"))
  
 input := &wos.PutObjectInput{}
 input.Bucket = bucketName
@@ -126,7 +126,7 @@ var ak = "*** Provide your Access Key ***"
 var sk = "*** Provide your Secret Key ***"
 var endpoint = "https://your-endpoint"
  
-wosClient, _ := wos.New(ak, sk, endpoint)
+wosClient, _ := wos.New(ak, sk, endpoint, wos.WithRegion("your-region"))
  
 input := &wos.GetObjectInput{}
 input.Bucket = bucketName
@@ -158,7 +158,7 @@ var ak = "*** Provide your Access Key ***"
 var sk = "*** Provide your Secret Key ***"
 var endpoint = "https://your-endpoint"
  
-wosClient, _ := wos.New(ak, sk, endpoint)
+wosClient, _ := wos.New(ak, sk, endpoint, wos.WithRegion("your-region"))
  
 input := &wos.DeleteObjectInput{}
 input.Bucket = bucketName

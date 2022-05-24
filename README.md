@@ -32,11 +32,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```
@@ -88,11 +88,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```
@@ -118,11 +118,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```
@@ -147,11 +147,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```
@@ -188,11 +188,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```
@@ -214,11 +214,11 @@ if err == nil {
 } else {
     // 解析接口响应的错误code和message
     if wosError, ok := err.(wos.WosError); ok {
-	       fmt.Println(wosError.StatusCode)
-	       fmt.Println(wosError.Code)
-	       fmt.Println(wosError.Message)
+        fmt.Println(wosError.StatusCode)
+        fmt.Println(wosError.Code)
+        fmt.Println(wosError.Message)
     } else {
-	       fmt.Println(err)
+        fmt.Println(err)
     }
 }
 ```

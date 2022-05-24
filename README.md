@@ -29,6 +29,15 @@ if err == nil {
  
     // 关闭wosClient
     wosClient.Close()
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
 }
 ```
 
@@ -76,6 +85,15 @@ if err == nil {
     for index, val := range output.Buckets {
         fmt.Printf("Bucket[%d]-Name:%s,CreationDate:%s,EndPoint:%s,Region:%s\n", index, val.Name, val.CreationDate, val.Endpoint, val.Region)
     }
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
 }
 ```
 
@@ -97,7 +115,16 @@ if err == nil {
         fmt.Printf("Content[%d]-ETag:%s, Key:%s, LastModified:%s, Size:%d, StorageClass:%s\n",
             index, val.ETag, val.Key, val.LastModified, val.Size, val.StorageClass)
     }
-}wosSdkVersion
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
+}
 ```
 
 ## 上传文件（Put Object）
@@ -117,6 +144,15 @@ output, err := wosClient.PutObject(input)
 if err == nil {
     fmt.Printf("StatusCode:%d, RequestId:%s\n", output.StatusCode, output.RequestId)
     fmt.Printf("ETag:%s", output.ETag)
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
 }
 ```
 
@@ -149,6 +185,15 @@ if err == nil {
             break
         }
     }
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
 }
 ```
 
@@ -166,6 +211,15 @@ input.Key = objectKey
 output, err := wosClient.DeleteObject(input)
 if err == nil {
     fmt.Printf("StatusCode:%d, RequestId:%s\n", output.StatusCode, output.RequestId)
+} else {
+    // 解析接口响应的错误code和message
+    if wosError, ok := err.(wos.WosError); ok {
+	       fmt.Println(wosError.StatusCode)
+	       fmt.Println(wosError.Code)
+	       fmt.Println(wosError.Message)
+    } else {
+	       fmt.Println(err)
+    }
 }
 ```
 

@@ -356,10 +356,18 @@ func (conf *config) prepareBaseURL(bucketName string) (requestURL string, canoni
 			canonicalizedURL = "/"
 		} else {
 			if conf.pathStyle {
-				requestURL = fmt.Sprintf("%s://%s:%d/%s", urlHolder.scheme, urlHolder.host, urlHolder.port, bucketName)
+				if urlHolder.port == 80 || urlHolder.port == 443 {
+					requestURL = fmt.Sprintf("%s://%s/%s", urlHolder.scheme, urlHolder.host, bucketName)
+				} else {
+					requestURL = fmt.Sprintf("%s://%s:%d/%s", urlHolder.scheme, urlHolder.host, urlHolder.port, bucketName)
+				}
 				canonicalizedURL = "/" + bucketName
 			} else {
-				requestURL = fmt.Sprintf("%s://%s.%s:%d", urlHolder.scheme, bucketName, urlHolder.host, urlHolder.port)
+				if urlHolder.port == 80 || urlHolder.port == 443 {
+					requestURL = fmt.Sprintf("%s://%s.%s", urlHolder.scheme, bucketName, urlHolder.host)
+				} else {
+					requestURL = fmt.Sprintf("%s://%s.%s:%d", urlHolder.scheme, bucketName, urlHolder.host, urlHolder.port)
+				}
 				if conf.signature == SignatureV2 {
 					canonicalizedURL = "/" + bucketName + "/"
 				} else {

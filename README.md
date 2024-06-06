@@ -2,7 +2,7 @@
 -此 Go SDK 基于网宿云存储(WCS)官方API构建
 
 # 版本
-`Current version: v1.0.1`
+`Current version: v1.0.2`
 
 # 运行环境
 `Go 1.7及以上。`

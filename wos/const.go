@@ -1,7 +1,7 @@
 package wos
 
 const (
-	wosSdkVersion          = "1.0.1"
+	wosSdkVersion          = "1.0.2"
 	USER_AGENT             = "wcs-go-sdk-v2/" + wosSdkVersion
 	HEADER_PREFIX          = "x-amz-"
 	HEADER_PREFIX_META     = "x-amz-meta-"
